@@ -90,5 +90,109 @@ namespace Basic
             }
             Console.ReadLine();
         }
+        public void exercise9()
+        {
+            int a, b, c, d;
+            int avg;
+            Console.WriteLine("Input the first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input the second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input the third number");
+            c = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input the fourth number");
+            d = Convert.ToInt32(Console.ReadLine());
+
+            avg = (a + b + c + d) / 4;
+            Console.WriteLine("The Average of {0}, {1}, {2} and {3} is {4}", a, b, c, d, avg);
+            Console.ReadLine();
+        }
+        public void exercise10()
+        {
+            int x, y, z;
+            Console.WriteLine("Input the first number");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input the second number");
+            y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input the third number");
+            z = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("{0} + {1} * {2} = {3}", x, y, z, (x+y)*z);
+            Console.WriteLine("{0} * {1} + {1} * {2} = {3}", x, y, z, x * y + y * z);
+
+            Console.ReadLine();
+        }
+        public void exercise11()
+        {
+            int input;
+            Console.Write("Enter your age: ");
+            input = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("You look older than {0}", input);
+            Console.ReadLine();
+        }
+        public void exercise12()
+        {
+            int input;
+            Console.Write("Enter a digit: ");
+            input = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("{0} {0} {0} {0}", input);
+                Console.WriteLine("{0}{0}{0}{0}", input);
+            }
+            Console.ReadLine();
+        }
+        public void exercise13()
+        {
+            int input;
+            Console.Write("Enter a digit: ");
+            input = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < 5; i++)
+            {
+                if(i == 0 ||i == 4)
+                {
+                    Console.WriteLine("{0}{0}{0}",input);
+                    continue;
+                }
+                Console.WriteLine("{0} {0}", input);
+            }
+
+            Console.ReadLine();
+        }
+        public void exercise14()
+        {
+            double celsius, kelvin, fahrenheit;
+            Console.Write("Enter the degree of celsius: ");
+            celsius = Convert.ToDouble(Console.ReadLine());
+            kelvin = 274.15 + celsius;
+            fahrenheit = celsius * (9.0 / 5.0) + 32.0;
+
+            Console.WriteLine("Celsius = {0}", celsius);
+            Console.WriteLine("Kelvin = {0}", kelvin);
+            Console.WriteLine("Fahrenheit = {0}", fahrenheit);
+
+            Console.ReadLine();
+        }
+        public void exercise15()
+        {
+            string input = "w3resource";
+
+            Console.WriteLine(input.Remove(1,1));
+            Console.WriteLine(input.Remove(9,1));
+            Console.WriteLine(input.Remove(0,1));
+
+            Console.ReadLine();
+        }
+        public void exercise16()
+        {
+            Exercise16 e = new Exercise16();
+            //Test strings
+            string test1 = "w3resource";
+            
+            Console.WriteLine("Pre-swap: {0}",test1);
+            Console.WriteLine("Swapped: {0}", e.swapFrontRear(test1));
+            Console.ReadLine();
+        }
     }
 }
