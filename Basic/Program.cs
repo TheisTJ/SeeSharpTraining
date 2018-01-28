@@ -26,7 +26,15 @@ namespace Basic
             //e.exercise13();
             //e.exercise14();
             //e.exercise15();
-            e.exercise16();
+            //e.exercise16();
+            //e.exercise17();
+            //e.exercise18();
+            //e.exercise19();
+            //e.exercise20();
+            //e.exercise21();
+            //e.exercise22();
+            //e.exercise23();
+            e.exercise24();
 
         }
     }

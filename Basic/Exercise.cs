@@ -194,5 +194,158 @@ namespace Basic
             Console.WriteLine("Swapped: {0}", e.swapFrontRear(test1));
             Console.ReadLine();
         }
+
+        public void exercise17()
+        {
+            string input = "The quick brown fox jumps over the lazy dog.";
+            char firstChar;
+
+            char[] inputArray;
+            inputArray = input.ToArray();
+            firstChar = inputArray[0];
+
+            Console.WriteLine(firstChar + input + firstChar);
+
+            Console.ReadLine();
+        }
+        public void exercise18()
+        {
+            int first;
+            int second;
+
+            Console.WriteLine("Input first integer:");
+            first = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input second integer:");
+            second = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Check if one is negative and one is positive");
+            Console.WriteLine("Answer: {0}", ((first > 0 && second < 0)||(second > 0 && first < 0)));
+
+            Console.ReadLine();
+        }
+
+        public void exercise19()
+        {
+            int first;
+            int second;
+
+            Console.WriteLine("Input first integer:");
+            first = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input second integer:");
+            second = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Checks if they are equals");
+            Console.Write("Result: ");
+            if (first == second)
+            {
+                Console.WriteLine("{0}",first*3);
+            }
+            else
+            {
+                Console.WriteLine("{0}", first * second);
+            }
+
+            Console.ReadLine();
+        }
+
+        public void exercise20()
+        {
+            int first;
+            int second;
+
+            Console.WriteLine("Input first integer:");
+            first = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input second integer:");
+            second = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Result: ");
+            if (second >= first)
+            {
+                Console.WriteLine("{0}", Math.Abs(second - first));
+            }
+            else
+            {
+                Console.WriteLine("{0}", Math.Abs(first - second) *2);
+            }
+
+            Console.ReadLine();
+        }
+
+        public void exercise21()
+        {
+            int first;
+            int second;
+
+            Console.WriteLine("Input first integer:");
+            first = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input second integer:");
+            second = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Result: ");
+            Console.WriteLine("{0}", first == 20 || second == 20 || first + second == 20);
+
+            Console.ReadLine();
+        }
+
+        public bool helper22(int input, int range)
+        {
+            int lower = range - 20;
+            int upper = range + 20;
+
+            return input > lower && input < upper;
+        }
+
+        public void exercise22()
+        {
+            int input;
+
+            Console.WriteLine("Input an integer:");
+            input = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Result: ");
+            Console.WriteLine("{0}", helper22(input, 100)||helper22(input,200));
+
+            Console.ReadLine();
+        }
+
+        public void exercise23()
+        {
+            String input;
+
+            Console.WriteLine("Input an uppercase string:");
+            input = Console.ReadLine();
+
+            Console.Write("Result: ");
+            Console.WriteLine("{0}", input.ToLower());
+
+            Console.ReadLine();
+        }
+
+        public void exercise24()
+        {
+            String input;
+            String longest = "";
+
+            String[] words;
+            
+            
+
+            Console.WriteLine("Input an uppercase string:");
+            input = Console.ReadLine();
+
+            words = input.Split(' ');
+
+            foreach(String s in words)
+            {
+                if( s.Length > longest.Length)
+                {
+                    longest = s;
+                }
+
+            }
+            Console.Write("Result: ");
+            Console.WriteLine("{0}", longest);
+
+            Console.ReadLine();
+        }
     }
 }
